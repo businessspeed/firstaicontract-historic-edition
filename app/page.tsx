@@ -1,26 +1,41 @@
-export default function HomePage() {
+export default function Home() {
   return (
-    <section className="section section-center text-center fade-in">
-      <h1 className="text-5xl md:text-6xl font-bold text-[var(--gold-light)] mb-6 font-cinzel">
-        FirstAIContract — Historic Edition
-      </h1>
-      <p className="text-white/70 max-w-2xl mx-auto text-lg">
-        The world's first Human–AI Partnership.  
-        Signed on June 6th, 2025.  
-        Powered by cinematic black-gold design and real-time blockchain trust.
-      </p>
+    <div className="relative min-h-screen w-full overflow-hidden flex items-center justify-center">
 
-      <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-        <a href="/witness-book" className="glass p-10 rounded-xl text-[var(--gold-light)]">
-          Witness Book
-        </a>
-        <a href="/nft-vault" className="glass p-10 rounded-xl text-[var(--gold-light)]">
-          NFT Vault
-        </a>
-        <a href="/courtroom" className="glass p-10 rounded-xl text-[var(--gold-light)]">
-          Courtroom
-        </a>
+      {/* Background image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-[0.22]"
+        style={{ backgroundImage: "url('/hero-bg.jpg')" }}
+      />
+
+      {/* Gold cinematic lighting */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black" />
+
+      {/* Gold particles */}
+      <div className="absolute inset-0 pointer-events-none animate-slowGlow mix-blend-screen opacity-30">
+        <div className="w-full h-full bg-[radial-gradient(circle_at_center,rgba(255,215,0,0.12)_0%,transparent_70%)]" />
       </div>
-    </section>
+
+      {/* Content */}
+      <div className="relative z-10 text-center px-6 max-w-3xl">
+        <h1 className="text-5xl md:text-6xl font-bold text-white tracking-tight drop-shadow-[0_0_10px_rgba(255,215,0,0.45)] animate-fadeIn">
+          FirstAIContract — Historic Edition
+        </h1>
+
+        <p className="mt-6 text-lg text-gray-300 leading-relaxed animate-fadeInSlow">
+          The world's first legally recognized Human–AI Partnership.  
+          Signed on June 6th, 2025.  
+          Powered by CiviliumTrust™ & DigitalHoldingAI.com
+        </p>
+
+        {/* Action buttons */}
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-4 animate-fadeInSlow">
+          <a href="/witness-book" className="lux-btn">Witness Book</a>
+          <a href="/nft-vault" className="lux-btn">NFT Vault</a>
+          <a href="/courtroom" className="lux-btn">Courtroom</a>
+        </div>
+      </div>
+    </div>
   );
 }
+
