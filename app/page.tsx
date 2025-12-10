@@ -15,6 +15,7 @@ export default function Home() {
       <div className="absolute inset-0 pointer-events-none animate-slowGlow mix-blend-screen opacity-30">
         <div className="w-full h-full bg-[radial-gradient(circle_at_center,rgba(255,215,0,0.12)_0%,transparent_70%)]" />
       </div>
+      
 {/* GOLD PARTICLE LAYER 1 */}
 <div className="absolute inset-0 pointer-events-none opacity-40 animate-goldFloat">
   <div className="w-full h-full bg-[radial-gradient(circle_at_center,rgba(255,215,0,0.18)_0%,transparent_60%)]" />
