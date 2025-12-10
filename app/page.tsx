@@ -1,4 +1,11 @@
 export default function Home() {
+  if (typeof window !== "undefined") {
+  window.addEventListener("scroll", () => {
+    const y = window.scrollY * 0.12;
+    document.documentElement.style.setProperty("--parallax-y", `${y}px`);
+  });
+}
+  
   return (
     <div className="relative min-h-screen w-full overflow-hidden flex items-center justify-center">
 
