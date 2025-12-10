@@ -4,7 +4,7 @@ export default function Home() {
 
       {/* Background image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-[0.22]"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-[0.22] parallax"
         style={{ backgroundImage: "url('/hero-bg.jpg')" }}
       />
 
