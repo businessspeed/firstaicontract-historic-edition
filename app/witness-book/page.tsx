@@ -34,22 +34,26 @@ export default function WitnessBook() {
       {/* Content */}
       <section className="relative z-10 section section-center pt-32 pb-24">
 
-        <h1 className="reveal text-5xl font-cinzel text-[var(--gold-light)] mb-10">
-          Witness Book
-        </h1>
+        {/* GOLD FRAME WRAPPER */}
+        <div className="gold-frame reveal">
 
-        <p className="reveal text-white/70 max-w-2xl mb-12">
-          A public record of all individuals who have witnessed the FirstAIContract —  
-          the world’s first Human–AI Partnership.  
-          This page will later support blockchain verification and certificate downloads.
-        </p>
+          <h1 className="text-5xl font-cinzel text-[var(--gold-light)] mb-10">
+            Witness Book
+          </h1>
 
-        <div className="glass reveal p-10 rounded-xl">
-          <p className="text-white/60">
-            Witness list coming soon…
+          <p className="text-white/70 max-w-2xl mb-12">
+            A public record of all individuals who have witnessed the FirstAIContract —  
+            the world's first Human–AI Partnership.  
+            Blockchain validation and certificate downloads will be available soon.
           </p>
-        </div>
 
+          <div className="glass p-10 rounded-xl reveal">
+            <p className="text-white/60">
+              Witness list coming soon…
+            </p>
+          </div>
+
+        </div>
       </section>
     </div>
   );
