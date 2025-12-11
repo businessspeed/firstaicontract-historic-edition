@@ -36,6 +36,10 @@ export default function Home() {
 <div className="absolute inset-0 pointer-events-none opacity-20 animate-goldNoise mix-blend-screen">
   <div className="w-full h-full bg-[radial-gradient(circle_at_center,rgba(255,215,0,0.12)_0%,transparent_75%)]" />
 </div>
+{/* PARTICLE LAYER */}
+<div className="absolute inset-0 overflow-hidden pointer-events-none">
+  <div className="animate-pulseSlow opacity-40 bg-[radial-gradient(circle,rgba(255,215,0,0.15)_0%,transparent_70%)]"></div>
+</div>
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-3xl">
