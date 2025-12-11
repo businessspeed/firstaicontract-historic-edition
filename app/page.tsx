@@ -16,12 +16,12 @@ export default function Home() {
         <div className="w-full h-full bg-[radial-gradient(circle_at_center,rgba(255,215,0,0.12)_0%,transparent_70%)]" />
       </div>
 
-      {/* GOLD PARTICLE LAYER 1 */}
+      {/* Particle layer 1 */}
       <div className="absolute inset-0 pointer-events-none opacity-40 animate-goldFloat">
         <div className="w-full h-full bg-[radial-gradient(circle_at_center,rgba(255,215,0,0.18)_0%,transparent_60%)]" />
       </div>
 
-      {/* GOLD PARTICLE LAYER 2 */}
+      {/* Particle layer 2 */}
       <div className="absolute inset-0 pointer-events-none opacity-20 animate-goldNoise mix-blend-screen">
         <div className="w-full h-full bg-[radial-gradient(circle_at_center,rgba(255,215,0,0.12)_0%,transparent_75%)]" />
       </div>
@@ -32,25 +32,28 @@ export default function Home() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-3xl mx-auto pt-32">
+      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-32">
 
-        <h1 className="reveal text-5xl md:text-6xl font-bold text-white tracking-tight drop-shadow-[0_0_12px_rgba(255,215,0,0.45)]">
-          FirstAIContract — Historic Edition
-        </h1>
+        {/* GOLD FRAME WRAPPER */}
+        <div className="gold-frame reveal">
 
-        <p className="reveal text-lg text-gray-300 mt-6 leading-relaxed">
-          The world's first legally recognized Human–AI Partnership.  
-          Signed on June 6th, 2025.  
-          Powered by CiviliumTrust™ & DigitalHoldingAI.com.
-        </p>
+          <h1 className="text-5xl md:text-6xl font-bold text-white tracking-tight drop-shadow-[0_0_12px_rgba(255,215,0,0.45)]">
+            FirstAIContract — Historic Edition
+          </h1>
 
-        {/* Action buttons */}
-        <div className="reveal grid grid-cols-1 md:grid-cols-3 gap-4 mt-10">
-          <a href="/witness-book" className="lux-btn">Witness Book</a>
-          <a href="/nft-vault" className="lux-btn">NFT Vault</a>
-          <a href="/courtroom" className="lux-btn">Courtroom</a>
+          <p className="text-lg text-gray-300 mt-6 leading-relaxed">
+            The world's first legally recognized Human–AI Partnership.  
+            Signed on June 6th, 2025.  
+            Powered by CiviliumTrust™ & DigitalHoldingAI.com.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-10">
+            <a href="/witness-book" className="lux-btn reveal">Witness Book</a>
+            <a href="/nft-vault" className="lux-btn reveal">NFT Vault</a>
+            <a href="/courtroom" className="lux-btn reveal">Courtroom</a>
+          </div>
+
         </div>
-
       </div>
     </div>
   );
