@@ -2,27 +2,27 @@ export default function Home() {
   return (
     <div className="relative min-h-screen w-full overflow-hidden">
 
-      {/* Background image */}
+      {/* Background image with PARALLAX */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-[0.22]"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-[0.22] parallax"
         style={{ backgroundImage: "url('/hero-bg.jpg')" }}
       />
 
-      {/* Cinematic gold glow */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black" />
+      {/* Cinematic gold glow (also parallax) */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black parallax" />
 
-      {/* Gold particles */}
-      <div className="absolute inset-0 pointer-events-none animate-slowGlow mix-blend-screen opacity-30">
+      {/* Gold particles — PARALLAX ENABLED */}
+      <div className="absolute inset-0 pointer-events-none animate-slowGlow mix-blend-screen opacity-30 parallax">
         <div className="w-full h-full bg-[radial-gradient(circle_at_center,rgba(255,215,0,0.12)_0%,transparent_70%)]" />
       </div>
 
       {/* Particle layer 1 */}
-      <div className="absolute inset-0 pointer-events-none opacity-40 animate-goldFloat">
+      <div className="absolute inset-0 pointer-events-none opacity-40 animate-goldFloat parallax">
         <div className="w-full h-full bg-[radial-gradient(circle_at_center,rgba(255,215,0,0.18)_0%,transparent_60%)]" />
       </div>
 
       {/* Particle layer 2 */}
-      <div className="absolute inset-0 pointer-events-none opacity-20 animate-goldNoise mix-blend-screen">
+      <div className="absolute inset-0 pointer-events-none opacity-20 animate-goldNoise mix-blend-screen parallax">
         <div className="w-full h-full bg-[radial-gradient(circle_at_center,rgba(255,215,0,0.12)_0%,transparent_75%)]" />
       </div>
 
