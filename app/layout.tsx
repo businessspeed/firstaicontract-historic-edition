@@ -12,6 +12,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
     <body className="bg-transparent text-white font-sans antialiased">
+      <script
+  dangerouslySetInnerHTML={{
+    __html: `
+      document.addEventListener("scroll", () => {
+        document.querySelectorAll('.reveal').forEach((el) => {
+          const rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight - 100) {
+            el.classList.add('visible');
+          }
+        });
+      });
+    `,
+  }}
+/script>
+
         <LanguageProvider>
 
           {/* PREMIUM DELUXE NAVBAR */}
