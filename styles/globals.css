@@ -124,5 +124,17 @@ body {
   opacity: 0;
   animation: fadeUp 1.3s ease-out forwards;
 }
+/* FAZA 3A — Cinematic Scroll Reveal */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease-out;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 
