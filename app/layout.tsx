@@ -1,64 +1,138 @@
-import "../styles/globals.css";
-import "../styles/theme.css";
-import Footer from "../components/Footer";
-import LanguageProvider from "../components/LanguageProvider";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-export const metadata = {
-  title: "FirstAIContract — Historic Edition",
-  description: "The world's first Human–AI Partnership platform.",
-};
+/* GLOBAL STYLES */
+body {
+  background: black;
+  color: white;
+  font-family: sans-serif;
+}
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en">
-    <body className="bg-transparent text-white font-sans antialiased">
-      <script
-  dangerouslySetInnerHTML={{
-    __html: `
-      document.addEventListener("scroll", () => {
-        document.querySelectorAll('.reveal').forEach((el) => {
-          const rect = el.getBoundingClientRect();
-          if (rect.top < window.innerHeight - 100) {
-            el.classList.add('visible');
-          }
-        });
-      });
-    `,
-  }}
-/script>
+/* Universal containers */
+.section {
+  padding: 80px 0;
+}
 
-        <LanguageProvider>
+.section-center {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
 
-          {/* PREMIUM DELUXE NAVBAR */}
-          <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-xl bg-black/30 border-b border-[#d4af37]/20 shadow-[0_0_15px_rgba(212,175,55,0.15)]">
-            <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-              
-              {/* Logo / Title */}
-              <a href="/" className="text-xl font-bold text-white tracking-wide">
-                FirstAIContract
-              </a>
+/* Glass effect */
+.glass {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(22px);
+  border: 1px solid rgba(255,255,255,0.1);
+}
 
-              {/* Navigation Links */}
-              <div className="flex gap-6 text-gray-300">
-                <a href="/" className="hover:text-[#d4af37] transition">Home</a>
-                <a href="/witness-book" className="hover:text-[#d4af37] transition">Witness Book</a>
-                <a href="/nft-vault" className="hover:text-[#d4af37] transition">NFT Vault</a>
-                <a href="/courtroom" className="hover:text-[#d4af37] transition">Courtroom</a>
-              </div>
-            </nav>
+/* Gold button */
+.gold-btn {
+  background: linear-gradient(to bottom, var(--gold-light), var(--gold-dark));
+  color: black;
+  font-weight: 700;
+  padding: 12px 24px;
+  border-radius: 10px;
+  transition: 0.2s;
+}
 
-            {/* Gold Signature Line */}
-            <div className="w-full h-[2px] bg-gradient-to-r from-transparent via-[#d4af37] to-transparent opacity-60"></div>
-          </header>
+.gold-btn:hover {
+  opacity: 0.85;
+}
 
-          <main className="min-h-screen">
-            {children}
-          </main>
+/* Fade animation */
+.fade-in {
+  animation: fadeIn .8s ease forwards;
+}
 
-          <Footer />
+@keyframes fadeIn {
+  from { opacity:0; transform: translateY(25px); }
+  to { opacity:1; transform: translateY(0); }
+}
+/* Fade in animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
-        </LanguageProvider>
-      </body>
-    </html>
-  );
+.animate-fadeIn {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.animate-fadeInSlow {
+  animation: fadeIn 1.6s ease-out forwards;
+}
+
+/* Slow gold breathing effect */
+@keyframes slowGlow {
+  0% { opacity: 0.10; }
+  50% { opacity: 0.23; }
+  100% { opacity: 0.10; }
+}
+
+.animate-slowGlow {
+  animation: slowGlow 6s ease-in-out infinite;
+}
+
+/* Luxury button style */
+.lux-btn {
+  @apply bg-white/10 border border-white/20 rounded-xl py-3 px-5 text-white
+         backdrop-blur-xl transition-all shadow-lg text-lg;
+}
+
+.lux-btn:hover {
+  background: rgba(255,215,0,0.15);
+  border-color: #d4af37;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255,215,0,0.45);
+}
+/* CINEMATIC GOLD PARTICLE ANIMATION */
+
+@keyframes goldFloat {
+  0%   { transform: translateY(0px) translateX(0px); opacity: 0.25; }
+  50%  { transform: translateY(-25px) translateX(15px); opacity: 0.45; }
+  100% { transform: translateY(0px) translateX(0px); opacity: 0.25; }
+}
+
+@keyframes goldNoise {
+  0%   { opacity: 0.05; }
+  50%  { opacity: 0.12; }
+  100% { opacity: 0.05; }
+}
+
+.animate-goldFloat {
+  animation: goldFloat 8s ease-in-out infinite;
+}
+
+.animate-goldNoise {
+  animation: goldNoise 6s ease-in-out infinite;
+}
+/* Smooth Cinematic Parallax */
+.parallax {
+  transform: translateY(var(--parallax-y, 0));
+  transition: transform 0.15s ease-out;
+}
+
+/* Scroll Reveal Animations */
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.reveal {
+  opacity: 0;
+  animation: fadeUp 1.3s ease-out forwards;
+}
+/* FAZA 3A — Cinematic Scroll Reveal */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease-out;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
