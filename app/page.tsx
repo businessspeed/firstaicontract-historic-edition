@@ -8,6 +8,10 @@ export default function Home() {
   
   return (
     <div className="relative min-h-screen w-full overflow-hidden flex items-center justify-center">
+{/* CINEMATIC GOLD LIGHTING */}
+<div className="absolute inset-0 pointer-events-none">
+  <div className="w-full h-full bg-[radial-gradient(circle_at_50%_20%,rgba(255,200,80,0.25),transparent_70%)] blur-3xl opacity-60"></div>
+</div>
 
       {/* Background image */}
       <div 
